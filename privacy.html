@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NeoMarket — Privacy Policy</title>
+  <!-- Google Fonts + same design system as homepage and terms -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafafc;
+      color: #1a1e2b;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header - consistent with all pages */
+    .site-header {
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02), 0 1px 0 #eef2f6;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0;
+      gap: 16px;
+    }
+
+    .logo-area h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1f2b4e, #2c3e66);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo-area span {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #4a5b7a;
+      display: block;
+      letter-spacing: -0.2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2c3e50;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #0066cc;
+    }
+    .cart-icon {
+      background: #f0f2f5;
+      padding: 8px 14px;
+      border-radius: 40px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* privacy hero */
+    .privacy-hero {
+      background: linear-gradient(115deg, #eef2fa 0%, #ffffff 100%);
+      padding: 56px 0 48px;
+      border-bottom: 1px solid #e4e9f0;
+    }
+    .privacy-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: #0a1929;
+    }
+    .privacy-hero p {
+      font-size: 1.1rem;
+      color: #3a4a62;
+      max-width: 720px;
+    }
+    .last-updated {
+      display: inline-block;
+      margin-top: 20px;
+      background: #e9eef4;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* main privacy layout */
+    .privacy-content {
+      padding: 64px 0 80px;
+    }
+    .privacy-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+    .privacy-sidebar {
+      flex: 1 1 260px;
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+    .privacy-sidebar nav ul {
+      list-style: none;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 20px 12px;
+      border: 1px solid #edf2f7;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+    .privacy-sidebar nav li {
+      margin-bottom: 12px;
+    }
+    .privacy-sidebar nav a {
+      text-decoration: none;
+      color: #2d3a4b;
+      font-weight: 500;
+      display: block;
+      padding: 8px 16px;
+      border-radius: 40px;
+      transition: all 0.2s;
+    }
+    .privacy-sidebar nav a:hover {
+      background: #eef2fa;
+      color: #0066cc;
+    }
+    .privacy-main {
+      flex: 3 1 600px;
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 40px 44px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+      border: 1px solid #eff3f8;
+    }
+    .privacy-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 100px;
+    }
+    .privacy-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+      color: #0f2b3d;
+      border-left: 4px solid #2c3e66;
+      padding-left: 20px;
+    }
+    .privacy-section h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 24px 0 12px 0;
+      color: #1f2b4e;
+    }
+    .privacy-section p {
+      margin-bottom: 16px;
+      color: #2d3e50;
+    }
+    .privacy-section ul, .privacy-section ol {
+      margin: 16px 0 20px 28px;
+      color: #2d3e50;
+    }
+    .privacy-section li {
+      margin-bottom: 8px;
+    }
+    .highlight-box {
+      background: #f8fafd;
+      border-left: 4px solid #2c3e66;
+      padding: 20px 24px;
+      border-radius: 20px;
+      margin: 24px 0;
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #f9fbfe;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .cookie-table th, .cookie-table td {
+      border: 1px solid #e2e8f0;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .cookie-table th {
+      background: #eef2fa;
+      font-weight: 600;
+    }
+    hr {
+      margin: 36px 0;
+      border: none;
+      border-top: 1px solid #e9edf2;
+    }
+    .badge-option {
+      background: #e6f7ec;
+      color: #1e6f2f;
+      padding: 2px 10px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    /* footer */
+    footer {
+      background: #0f1722;
+      color: #cbd5e6;
+      padding: 48px 0 32px;
+      margin-top: 20px;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .footer-col p {
+      max-width: 260px;
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 16px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 10px;
+    }
+    .footer-col a {
+      color: #9aaec9;
+      text-decoration: none;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #1e2a3a;
+      font-size: 0.8rem;
+    }
+    .back-to-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0a2540;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 24px;
+      transition: 0.2s;
+    }
+    .back-to-home:hover {
+      background: #1f4a6e;
+    }
+
+    @media (max-width: 860px) {
+      .privacy-main { padding: 28px 24px; }
+      .privacy-hero h1 { font-size: 2.2rem; }
+      .header-inner { flex-direction: column; }
+      .privacy-sidebar { position: relative; top: 0; }
+      .cookie-table { font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-area">
+      <h1>NeoMarket</h1>
+      <span>⚡ future-forward commerce</span>
+    </div>
+    <div class="nav-links">
+    <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Privacy Hero -->
+  <section class="privacy-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Your privacy matters at NeoMarket. This policy explains how we collect, use, disclose, and safeguard your information when you visit our platform.</p>
+      <div class="last-updated">🔒 Last updated: June 12, 2026 | Effective: June 12, 2026</div>
+    </div>
+  </section>
+
+  <!-- Main privacy content with sidebar -->
+  <div class="container privacy-content">
+    <div class="privacy-grid">
+      <!-- Sidebar navigation -->
+      <aside class="privacy-sidebar">
+        <nav>
+          <ul>
+            <li><a href="#intro">📖 Introduction</a></li>
+            <li><a href="#info-collect">📋 Information We Collect</a></li>
+            <li><a href="#use-info">⚙️ How We Use Your Info</a></li>
+            <li><a href="#cookies">🍪 Cookies & Tracking</a></li>
+            <li><a href="#sharing">🤝 Sharing & Disclosure</a></li>
+            <li><a href="#datasecurity">🛡️ Data Security</a></li>
+            <li><a href="#yourrights">✅ Your Privacy Rights</a></li>
+            <li><a href="#children">🧒 Children's Privacy</a></li>
+            <li><a href="#thirdparty">🔗 Third-Party Links</a></li>
+            <li><a href="#international">🌐 International Transfers</a></li>
+            <li><a href="#policy-updates">📢 Policy Updates</a></li>
+            <li><a href="#contact-privacy">📞 Contact Us</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="back-to-home" style="display: inline-flex; margin-top: 24px; background: #eef2fa; color: #1f2b4e;" onclick="window.location.href='#';">← Back to NeoMarket Home</a>
+      </aside>
+
+      <!-- Main privacy policy body -->
+      <div class="privacy-main">
+        <div id="intro" class="privacy-section">
+          <h2>1. Introduction</h2>
+          <p>Welcome to NeoMarket ("we," "our," "us"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy policy or our practices, please contact us at <strong>privacy@neomarket.com</strong>.</p>
+          <p>This Privacy Policy applies to all information collected through our website (neomarket.com), mobile application, and any related services, sales, or events (collectively, the "Platform"). By using NeoMarket, you agree to the collection and use of information in accordance with this policy.</p>
+          <div class="highlight-box">
+            <strong>📌 Key principle:</strong> We only collect what is necessary to provide a seamless shopping experience, improve our services, and communicate with you transparently.
+          </div>
+        </div>
+
+        <div id="info-collect" class="privacy-section">
+          <h2>2. Information We Collect</h2>
+          <p>We collect personal information that you voluntarily provide to us when you register, make a purchase, or interact with the Platform.</p>
+          <h3>Personal Data You Disclose</h3>
+          <ul>
+            <li><strong>Account info:</strong> Name, email address, password, profile preferences.</li>
+            <li><strong>Order details:</strong> Billing/shipping address, phone number, payment card data (processed securely via third-party gateways — we do not store full card numbers).</li>
+            <li><strong>Communications:</strong> Customer support inquiries, reviews, feedback, or survey responses.</li>
+          </ul>
+          <h3>Automatically Collected Information</h3>
+          <ul>
+            <li><strong>Device & usage data:</strong> IP address, browser type, operating system, referring URLs, pages viewed, timestamps.</li>
+            <li><strong>Purchase history:</strong> Products viewed, cart activity, and transaction logs.</li>
+            <li><strong>Location data:</strong> Approximate location derived from IP address for regional compliance and personalized offers.</li>
+          </ul>
+        </div>
+
+        <div id="use-info" class="privacy-section">
+          <h2>3. How We Use Your Information</h2>
+          <p>We use the information we collect for legitimate business purposes, including:</p>
+          <ul>
+            <li>Processing and fulfilling orders, returns, and exchanges.</li>
+            <li>Managing your account and providing customer support.</li>
+            <li>Sending order confirmations, shipping alerts, and service updates.</li>
+            <li>Improving our Platform, products, and personalizing recommendations.</li>
+            <li>Marketing communications (with your consent, where required). You can opt-out anytime.</li>
+            <li>Detecting fraud, security incidents, and enforcing our Terms of Service.</li>
+            <li>Complying with legal obligations.</li>
+          </ul>
+          <p>We never sell your personal data to third parties for their own marketing purposes without explicit consent.</p>
+        </div>
+
+        <div id="cookies" class="privacy-section">
+          <h2>4. Cookies & Similar Tracking Technologies</h2>
+          <p>We use cookies, web beacons, and pixels to enhance your browsing experience, analyze site traffic, and serve relevant ads. You can manage cookie preferences via your browser settings.</p>
+          <table class="cookie-table">
+            <thead>
+              <tr><th>Type</th><th>Purpose</th><th>Duration</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Essential Cookies</td><td>Enable core features (cart, checkout, login).</td><td>Session / Persistent</td></tr>
+              <tr><td>Analytics Cookies</td><td>Track usage (Google Analytics, etc.) to improve performance.</td><td>Up to 2 years</td></tr>
+              <tr><td>Functional Cookies</td><td>Remember preferences & language settings.</td><td>Up to 12 months</td></tr>
+              <tr><td>Advertising Cookies</td><td>Deliver personalized offers & retargeting.</td><td>Up to 180 days</td></tr>
+            </tbody>
+          </table>
+          <p>Third-party services (like payment processors or analytics) may set their own cookies, governed by their respective policies.</p>
+          <div class="highlight-box">
+            🍪 <strong>Cookie Consent:</strong> Upon your first visit, we display a cookie banner to manage non-essential cookies. You can withdraw consent at any time via our cookie settings.
+          </div>
+        </div>
+
+        <div id="sharing" class="privacy-section">
+          <h2>5. Sharing & Disclosure</h2>
+          <p>We only share your information in the following circumstances:</p>
+          <ul>
+            <li><strong>Service Providers:</strong> Payment processors (Stripe, PayPal), shipping carriers (FedEx, DHL), and IT infrastructure hosts. They are contractually bound to protect your data.</li>
+            <li><strong>Legal Compliance:</strong> If required by law, court order, or governmental regulation.</li>
+            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or asset sale, we will notify you via email or prominent notice.</li>
+            <li><strong>With your consent:</strong> For other purposes when you give explicit permission.</li>
+          </ul>
+          <p>We do not rent, sell, or trade your personal information to third parties for direct marketing.</p>
+        </div>
+
+        <div id="datasecurity" class="privacy-section">
+          <h2>6. Data Security</h2>
+          <p>We implement industry-standard security measures — including SSL/TLS encryption, access controls, and regular vulnerability scans — to protect your data. However, no method of transmission over the internet is 100% secure. We encourage you to use strong passwords and protect your login credentials.</p>
+          <p>If we become aware of a data breach affecting your personal information, we will notify you and relevant authorities as required by applicable laws.</p>
+        </div>
+
+        <div id="yourrights" class="privacy-section">
+          <h2>7. Your Privacy Rights</h2>
+          <p>Depending on your location (e.g., GDPR for EEA, UK, or CCPA for California residents), you may have the following rights:</p>
+          <ul>
+            <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+            <li><strong>Correction:</strong> Update inaccurate or incomplete information.</li>
+            <li><strong>Deletion:</strong> Request erasure of your data, subject to legal retention obligations (e.g., transaction records).</li>
+            <li><strong>Opt-out of Sale/Sharing:</strong> NeoMarket does not sell personal data; however, you may opt out of targeted advertising.</li>
+            <li><strong>Data Portability:</strong> Receive your data in a structured, machine-readable format.</li>
+            <li><strong>Withdraw Consent:</strong> For marketing emails — click "unsubscribe" or adjust account settings.</li>
+          </ul>
+          <p>To exercise these rights, contact us at <strong>privacy@neomarket.com</strong>. We will respond within 30 days. We may need to verify your identity.</p>
+          <div class="highlight-box">
+            🌍 <strong>California residents:</strong> You have the right to know what personal information is collected and to request deletion (subject to exceptions). We do not discriminate for exercising CCPA rights.
+          </div>
+        </div>
+
+        <div id="children" class="privacy-section">
+          <h2>8. Children's Privacy</h2>
+          <p>NeoMarket does not knowingly collect personal information from children under the age of 13 (or under 16 in certain jurisdictions). If we become aware that a child has provided us with data, we will delete such information immediately. Parents or guardians who believe their child has submitted personal data should contact us.</p>
+        </div>
+
+        <div id="thirdparty" class="privacy-section">
+          <h2>9. Third-Party Links</h2>
+          <p>The Platform may contain links to external websites (e.g., brand partners, social media). We are not responsible for the privacy practices of such sites. We encourage you to review their policies before providing any personal information.</p>
+        </div>
+
+        <div id="international" class="privacy-section">
+          <h2>10. International Data Transfers</h2>
+          <p>NeoMarket is headquartered in the United States, and your data may be transferred to, stored, or processed in countries outside your own. When transferring data from the European Economic Area (EEA) or the UK, we rely on Standard Contractual Clauses (SCCs) or adequacy decisions to ensure an equivalent level of protection.</p>
+          <p>By using our Platform, you consent to the transfer of your data to the US and other jurisdictions as described.</p>
+        </div>
+
+        <div id="policy-updates" class="privacy-section">
+          <h2>11. Updates to This Privacy Policy</h2>
+          <p>We may revise this Privacy Policy from time to time to reflect changes in legal requirements or our operations. The latest version will always be posted on this page with the "Last updated" date. If material changes occur, we will notify you via email or a prominent notice on the Platform. Your continued use of NeoMarket after changes constitutes acceptance.</p>
+        </div>
+
+        <div id="contact-privacy" class="privacy-section">
+          <h2>12. Contact Us</h2>
+          <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out:</p>
+          <ul>
+            <li>📧 Email: <a href="mailto:privacy@neomarket.com">privacy@neomarket.com</a></li>
+            <li>📞 Phone: +1 (888) 789-4321 (Mon-Fri, 9am-5pm ET)</li>
+            <li>📍 Postal Address: NeoMarket Privacy Office, 101 Neo Plaza, Suite 500, Wilmington, DE 19801, USA</li>
+          </ul>
+          <p>Our Data Protection Officer (DPO) can be contacted at dpo@neomarket.com for GDPR-related inquiries.</p>
+        </div>
+
+        <hr>
+        <p style="font-size: 0.85rem; color: #5f6f8a;">This Privacy Policy is intended to provide transparency and control. Trust is the foundation of NeoMarket — we will always handle your data with care and respect.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h3 style="color:white; font-size: 1.6rem;">NeoMarket</h3>
+      <p>Redefining modern commerce. Curated products, seamless experience.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Discord</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container copyright">
+    <p>© 2026 NeoMarket — All rights reserved. | <a href="#" style="color:#9aaec9;">Privacy Policy</a> | <a href="#" style="color:#9aaec9;">Terms of Service</a></p>
+  </div>
+</footer>
+
+<!-- smooth scroll + simple interactive cart simulation -->
+<script>
+  // Smooth scroll for sidebar anchor links
+  document.querySelectorAll('.privacy-sidebar a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, `#${targetId}`);
+      }
+    });
+  });
+
+  // Cart demo consistency
+  let cartCount = 0;
+  const cartSpan = document.querySelector('.cart-icon');
+  if (cartSpan) {
+    cartSpan.addEventListener('click', () => {
+      alert('🛍️ Your NeoMarket cart is ready — discover amazing products!');
+    });
+  }
+
+  // Back to home demo (placeholder)
+  const homeBtn = document.querySelector('.back-to-home');
+  if (homeBtn) {
+    homeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('✨ Returning to NeoMarket homepage (demo navigation)');
+      // In production, redirect to index.html
+    });
+  }
+
+  console.log('NeoMarket Privacy Policy — fully loaded, transparent & secure');
+</script>
+
+</body>
+</html>
